@@ -90,12 +90,12 @@ if exptno == 1:     # 30 mph, STRAIGHT ROAD NORTH
     elif nstates == 4:
 
         # NMPC Data
-        N = 12  # 12
-        T = 0.2  # 0.2
+        N = 6  # 12
+        T = 0.5  # 0.2
 
         # Ipopt settings
         nlpMaxIter = 100
-        mpciterations = 15
+        mpciterations = 18
 
         # Kinematic Constraints
         E0 = 0  # ft (North, long)
@@ -130,7 +130,7 @@ if exptno == 1:     # 30 mph, STRAIGHT ROAD NORTH
         V_cmd = V0  # fps
 
         # Terminal constraint
-        delta_yRoad = 0.5 * 5  # ft
+        delta_yRoad = 0.5  # ft
         delta_yRoadRelaxed = 5  # ft, in safe zone
         delta_V = 1 * mph2fps  # fps
 
